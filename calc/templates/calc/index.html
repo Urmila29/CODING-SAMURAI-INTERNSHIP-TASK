@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="calculator">
+    <input type="text" id="display" class="form-control mb-3" readonly>
+    <div class="row g-2">
+        {% for i in buttons %}
+        <div class="col-3">
+            <button type="button" class="btn btn-dark w-100 calc-btn">{{ i }}</button>
+        </div>
+        {% endfor %}
+    </div>
+    <button class="btn btn-danger mt-2 w-100" onclick="clearDisplay()">Clear</button>
+</div>
+
+<script src="{% static 'js/calculator.js' %}"></script>
+
+{% endblock %}

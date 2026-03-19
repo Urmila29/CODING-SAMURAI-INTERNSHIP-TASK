@@ -1,0 +1,26 @@
+body {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+}
+
+.app-card {
+    padding: 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transition: 0.3s;
+}
+
+.app-card:hover {
+    transform: scale(1.05);
+    background: rgba(255,255,255,0.2);
+}
+
+.calcultor {
+    max-width: 300px;
+    margin: auto;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
