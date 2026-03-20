@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/todostyle.css' %}">
+
+<div class="container">
+    <h2>ToDo List</h2>
+
+    <form method="POST" action="{% url 'todolist' %}">{% csrf_token %}
+        <input type="text" name="task" placeholder="Enter task">
+        <button type="submit">Add</button>
+    </form>
+
+    <ul>
+        {% for task in tasks %}
+        <li>
+            {{ task }}
+            <a href="{% url 'delete' forloop.counter0 %}" class="delete-btn">Delete</a>
+        </li>
+        {% empty %}
+        <p>No tasks yet</p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

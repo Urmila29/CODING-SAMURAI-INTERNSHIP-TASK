@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
     path('calculator/', include('calc.urls')),
+    path('todo/', include('todo.urls')),
 ]
